@@ -1,0 +1,4 @@
+# removing binaries
+
+*.out
+hello
