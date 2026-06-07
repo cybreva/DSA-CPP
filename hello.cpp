@@ -1,11 +1,11 @@
 #include <iostream>
 
 int main(){
-    int age;
+    int a,b;
 
-    std::cout<<"enter your age : \n";
-    std ::cin >>age;
-    std::cout<<"your age is "<<age<<"\n";
+    std::cout << "enter two numbers : " ;
+    std ::cin >> a >> b ;
+    std::cout << "sum " << a+b << "\n" ;
   
 
     
