@@ -1,11 +1,16 @@
 #include <iostream>
+#include <string>
 
 int main(){
     int a,b;
 
-    std::cout << "enter two numbers : " ;
-    std ::cin >> a >> b ;
-    std::cout << "sum " << a+b << "\n" ;
+    std :: string name ;
+
+    std :: cout << "enter name : ";
+    std :: cin >> name ;
+    
+    std :: cout << "Hello " << name << "\n";
+
   
 
     
