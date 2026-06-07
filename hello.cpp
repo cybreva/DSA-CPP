@@ -1,12 +1,14 @@
 #include <iostream>
 
 int main(){
+    int age;
 
+    std::cout<<"enter your age : \n";
+    std ::cin >>age;
+    std::cout<<"your age is "<<age<<"\n";
   
 
-    std :: cout<<"hello c++\n";
-
-    std :: cout<<"hello to the world too\n";
+    
 
     return 0;
 }
