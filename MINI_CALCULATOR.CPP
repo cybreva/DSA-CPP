@@ -36,78 +36,67 @@ int main(){
     switch(choice)
    {
     case 1:
-    //addition
+        //addition
 
     
 
-        std :: cout << "\nENTER FIRST NUMBER: ";
-        std :: cin >> x;
-        std :: cout << "\nENTER SECOND NUMBER :";
-        std :: cin >> y;
-
-
-        std :: cout << "you choosed addition\n";
-        
-        z = x+y;
        
-        std :: cout << "your output is " << z << "\n";
+        std::cout << "\n=== ADDITION ===\n";
+
+        std::cout << "ENTER FIRST NUMBER : ";
+        std::cin >> x;
+
+        std::cout << "ENTER SECOND NUMBER : ";
+        std::cin >> y;
+
+        z = x + y;
+
+        std::cout << "\nRESULT = " << z << "\n";
         break;
 
     case 2:
-        // subtraction
+       
+        std::cout << "\n=== SUBTRACTION ===\n";
 
+        std::cout << "ENTER FIRST NUMBER : ";
+        std::cin >> x;
 
-        
-        std :: cout << "\nENTER FIRST NUMBER: ";
-        std :: cin >> x;
-        std :: cout << "\nENTER SECOND NUMBER :";
-        std :: cin >> y;
+        std::cout << "ENTER SECOND NUMBER : ";
+        std::cin >> y;
 
+        z = x - y;
 
-        std :: cout << "you choosed subtraction";
-
-        z = x - y ;
-
-        std :: cout << "your output is " << z << "\n";
-        break;
+        std::cout << "\nRESULT = " << z << "\n";
+        break;;
 
     case 3:
-        // multiplication
-
-
-
         
+        std::cout << "\n=== MULTIPLICATION ===\n";
 
-        std :: cout << "\nENTER FIRST NUMBER: ";
-        std :: cin >> x;
-        std :: cout << "\nENTER SECOND NUMBER :";
-        std :: cin >> y;
+        std::cout << "ENTER FIRST NUMBER : ";
+        std::cin >> x;
 
+        std::cout << "ENTER SECOND NUMBER : ";
+        std::cin >> y;
 
-        std :: cout << "you choosed multiplication";
+        z = x * y;
 
-        z = x*y;
-
-        std :: cout << "your output is " << z << "\n";
+        std::cout << "\nRESULT = " << z << "\n";
         break;
 
     case 4:
-        // division
+      
+        std::cout << "\n=== DIVISION ===\n";
 
+        std::cout << "ENTER FIRST NUMBER : ";
+        std::cin >> x;
 
-       
+        std::cout << "ENTER SECOND NUMBER : ";
+        std::cin >> y;
 
-        std :: cout << "\nENTER FIRST NUMBER: ";
-        std :: cin >> x;
-        std :: cout << "\nENTER SECOND NUMBER :";
-        std :: cin >> y;
+        z = x / y;
 
-        
-        std :: cout << "you choosed division";
-
-        z = x/y;
-
-        std :: cout << "your output is " << z << "\n";
+        std::cout << "\nRESULT = " << z << "\n";
         break;
 
     default:
