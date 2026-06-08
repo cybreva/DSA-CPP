@@ -7,7 +7,7 @@ using namespace std ;
 
 int main (){
     
-    
+/*    
 
     //for loop 
 
@@ -43,6 +43,16 @@ int main (){
         cout <<  "\n";
     }
 
+*/
+
+    //WHILE LOOP 
+
+    int i = 100 ;
+
+    while(i>=1){
+        cout<<"\n"<<i<<"\n";
+        i--;
+    }
 
     
 
