@@ -12,3 +12,6 @@ loops
 waste
 ATM
 project
+file_handling
+*.txt
+*tempCodeRunnerFile.cpp
