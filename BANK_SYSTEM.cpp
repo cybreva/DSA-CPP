@@ -4,6 +4,9 @@
 
 using namespace std;
 
+void save_transaction(string message);
+void show_history(string message);
+
 void welcome()
 {
     cout << "================================\n";
@@ -80,7 +83,7 @@ int deposit_money(int balance)
     save_balance(balance);
     cout << "Money Deposited Successfully!\n";
     cout << "New Balance : $" << balance << "\n";
-    ;
+    save_transaction("Deposited Money");
     return balance;
 }
 
@@ -97,6 +100,7 @@ int withdraw_money(int balance)
         save_balance(balance);
         cout << "Withdrawal Successful!\n";
         cout << "Remaining Balance : $" << balance << "\n";
+        save_transaction("Withdrawn Money");
     }
     else
     {
@@ -136,6 +140,19 @@ void save_transaction(string message)
     ofstream file("history.txt", ios::app);
 
     file << message << "\n";
+
+    file.close();
+}
+void show_history()
+{
+    ifstream file("history.txt");
+
+    string line;
+
+    while(getline(file, line))
+    {
+        cout << line << "\n";
+    }
 
     file.close();
 }
@@ -181,7 +198,8 @@ int main()
         cout << "2. Deposit Money\n";
         cout << "3. Withdraw Money\n";
         cout << "4. Change Pin \n";
-        cout << "5. Exit\n";
+        cout << "5. Transaction History\n";
+        cout << "6. Exit\n";
 
         cout << "\nEnter Your Choice : ";
         cin >> choice;
@@ -204,6 +222,9 @@ int main()
             
         }
         else if (choice == 5){
+            show_history();
+        }
+        else if (choice == 6){
             cout << "\nThank You For Using City Bank!\n";
         }
         else
