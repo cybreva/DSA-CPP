@@ -5,7 +5,7 @@
 using namespace std;
 
 void save_transaction(string message);
-void show_history(string message);
+void show_history();
 
 void welcome()
 {
@@ -83,7 +83,7 @@ int deposit_money(int balance)
     save_balance(balance);
     cout << "Money Deposited Successfully!\n";
     cout << "New Balance : $" << balance << "\n";
-    save_transaction("Deposited Money");
+    save_transaction("Deposited : $" + to_string(amount));
     return balance;
 }
 
@@ -100,7 +100,7 @@ int withdraw_money(int balance)
         save_balance(balance);
         cout << "Withdrawal Successful!\n";
         cout << "Remaining Balance : $" << balance << "\n";
-        save_transaction("Withdrawn Money");
+        save_transaction("Deposited : $" + to_string(amount));
     }
     else
     {
