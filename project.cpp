@@ -39,6 +39,13 @@ int pin_input()
 
     return pin;
 }
+int check_balance(){
+
+    int balance = 1000 ;
+    cout << "your account balance is : $ " << balance << "\n";
+    return balance ;
+
+}
 
 int main()
 {
@@ -47,6 +54,10 @@ int main()
     string name = name_input();
 
     int account_number = acc_number_input();
+
+    int balance = check_balance();
+
+    int choice ;
 
     if (account_number != 1234)
     {
@@ -69,6 +80,35 @@ int main()
 
     cout << "\nLogin Successful!\n";
     cout << "Welcome, " << name << "!\n";
+
+
+    
+    cout << "What Do You Want To Do \n";
+    cout << "1. Check Balance\n 2. Deposit Money\n 3. Widhraw Money 4.";
+
+    if (choice ==1){
+
+        cout << "======Balance======\n";
+        cout <<"your account balance is" << balance <<"\n";
+        
+    }
+
+    else if ( choice == 2){
+
+        cout << "please enter the ammount you want to add";
+        cout << " 1  2  3  4";
+        cout << " 5  6  7  8";
+        cout << " ❌  9  0 ✅";
+
+    }
+
+
+
+
+
+
+
+
 
     return 0;
 }
