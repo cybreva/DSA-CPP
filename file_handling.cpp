@@ -37,7 +37,7 @@ int main (){
     
     int choice ;
     cout << "what do you want to do with file\n";
-    cout << "1.input\n2.output\n3.exit\n";
+    cout << "1.input\n2.output\n3.exit\n\n";
     cin >> choice ;
     do{
     if (choice == 1){
