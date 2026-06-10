@@ -16,3 +16,5 @@ file_handling
 *.txt
 *tempCodeRunnerFile.cpp
 BANK_SYSTEM
+*.csv
+*.env

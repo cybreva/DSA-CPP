@@ -135,11 +135,11 @@ int change_pin()
     return new_pin;
 }
 
-void save_transaction(string message)
+void save_transaction(string type, int amount)
 {
-    ofstream file("history.txt", ios::app);
+    ofstream file("history.csv", ios::app);
 
-    file << message << "\n";
+    file << type << "," << amount << "\n";
 
     file.close();
 }
