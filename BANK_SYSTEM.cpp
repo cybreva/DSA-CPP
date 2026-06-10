@@ -48,6 +48,26 @@ int check_balance(int balance)
 
     return balance;
 }
+int load_balance(){
+
+     ifstream file("balance.txt");
+
+    int balance;
+
+    file >> balance;
+
+    file.close();
+
+    return balance;
+}
+void save_balance(int balance)
+{
+    ofstream file("balance.txt");
+
+    file << balance;
+
+    file.close();
+}
 
 int deposit_money(int balance)
 {
@@ -57,10 +77,10 @@ int deposit_money(int balance)
     cin >> amount;
 
     balance = balance + amount;
-
+    save_balance(balance);
     cout << "Money Deposited Successfully!\n";
     cout << "New Balance : $" << balance << "\n";
-
+    ;
     return balance;
 }
 
@@ -74,7 +94,7 @@ int withdraw_money(int balance)
     if (amount <= balance)
     {
         balance = balance - amount;
-
+        save_balance(balance);
         cout << "Withdrawal Successful!\n";
         cout << "Remaining Balance : $" << balance << "\n";
     }
@@ -111,6 +131,15 @@ int change_pin()
     return new_pin;
 }
 
+void save_transaction(string message)
+{
+    ofstream file("history.txt", ios::app);
+
+    file << message << "\n";
+
+    file.close();
+}
+
 
 int main()
 {
@@ -142,7 +171,7 @@ int main()
     cout << "\nLogin Successful!\n";
     cout << "Welcome, " << name << "!\n";
 
-    int balance = 1000;
+    int balance = load_balance(); 
     int choice;
 
     do
