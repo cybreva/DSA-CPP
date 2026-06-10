@@ -39,13 +39,77 @@ int pin_input()
 
     return pin;
 }
-int check_balance(){
 
-    int balance = 1000 ;
-    cout << "your account balance is : $ " << balance << "\n";
-    return balance ;
+int check_balance(int balance)
+{
+    cout << "\n===== ACCOUNT BALANCE =====\n";
+    cout << "Your Balance : $" << balance << "\n";
 
+    return balance;
 }
+
+int deposit_money(int balance)
+{
+    int amount;
+
+    cout << "\nEnter Amount To Deposit : $";
+    cin >> amount;
+
+    balance = balance + amount;
+
+    cout << "Money Deposited Successfully!\n";
+    cout << "New Balance : $" << balance << "\n";
+
+    return balance;
+}
+
+int withdraw_money(int balance)
+{
+    int amount;
+
+    cout << "\nEnter Amount To Withdraw : $";
+    cin >> amount;
+
+    if (amount <= balance)
+    {
+        balance = balance - amount;
+
+        cout << "Withdrawal Successful!\n";
+        cout << "Remaining Balance : $" << balance << "\n";
+    }
+    else
+    {
+        cout << "Insufficient Balance!\n";
+    }
+
+    return balance;
+}
+int change_pin()
+{
+    int old_pin;
+
+    do
+    {
+        cout << "Enter Old PIN : ";
+        old_pin = pin_input();
+
+        if(old_pin != 7221)
+        {
+            cout << "Wrong PIN! Try Again.\n";
+        }
+
+    } while(old_pin != 7221);
+
+    int new_pin;
+
+    cout << "Enter New PIN : ";
+    cin >> new_pin;
+
+    cout << "PIN Changed Successfully!\n";
+
+    return new_pin;
+}
+
 
 int main()
 {
@@ -54,10 +118,6 @@ int main()
     string name = name_input();
 
     int account_number = acc_number_input();
-
-    int balance = check_balance();
-
-    int choice ;
 
     if (account_number != 1234)
     {
@@ -81,34 +141,47 @@ int main()
     cout << "\nLogin Successful!\n";
     cout << "Welcome, " << name << "!\n";
 
+    int balance = 1000;
+    int choice;
 
-    
-    cout << "What Do You Want To Do \n";
-    cout << "1. Check Balance\n 2. Deposit Money\n 3. Widhraw Money 4.";
+    do
+    {
+        cout << "\n\n===== ATM MENU =====\n";
+        cout << "1. Check Balance\n";
+        cout << "2. Deposit Money\n";
+        cout << "3. Withdraw Money\n";
+        cout << "4. Change Pin \n";
+        cout << "5. Exit\n";
 
-    if (choice ==1){
+        cout << "\nEnter Your Choice : ";
+        cin >> choice;
 
-        cout << "======Balance======\n";
-        cout <<"your account balance is" << balance <<"\n";
-        
-    }
+        if (choice == 1)
+        {
+            check_balance(balance);
+        }
+        else if (choice == 2)
+        {
+            balance = deposit_money(balance);
+        }
+        else if (choice == 3)
+        {
+            balance = withdraw_money(balance);
+        }
+        else if (choice == 4)
+        {
+            pin = change_pin();
+            
+        }
+        else if (choice == 5){
+            cout << "\nThank You For Using City Bank!\n";
+        }
+        else
+        {
+            cout << "\nInvalid Choice!\n";
+        }
 
-    else if ( choice == 2){
-
-        cout << "please enter the ammount you want to add";
-        cout << " 1  2  3  4";
-        cout << " 5  6  7  8";
-        cout << " ❌  9  0 ✅";
-
-    }
-
-
-
-
-
-
-
-
+    } while (choice != 5);
 
     return 0;
 }
