@@ -145,13 +145,13 @@ void save_transaction(string type, int amount)
 }
 void show_history()
 {
-    ifstream file("history.txt");
+    ifstream file("history.csv");
 
     string line;
 
     while(getline(file, line))
     {
-        cout << line << "\n";
+        cout << line << endl;
     }
 
     file.close();
