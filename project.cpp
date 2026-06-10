@@ -3,74 +3,75 @@
 
 using namespace std;
 
-void welcome() {
-    cout << "========WELCOME=========\n===========CITY BANK=========\n";
+void welcome()
+{
+    cout << "================================\n";
+    cout << "      WELCOME TO CITY BANK      \n";
+    cout << "================================\n";
 }
 
-string name_input() {
-
+string name_input()
+{
     string name;
 
-    cout << "\nENTER YOUR NAME : ";
+    cout << "\nEnter Your Name : ";
     cin >> name;
 
     return name;
 }
 
-int acc_number_input() {
-
+int acc_number_input()
+{
     int account_number;
 
-    cout << "\nPLEASE ENTER YOUR ACCOUNT NUMBER : ";
+    cout << "Enter Account Number : ";
     cin >> account_number;
 
     return account_number;
 }
-int pin_account (){
-    
-    int pin_account;
-    
-    cout << " please enter your pin ";
-    
-    cin >> pin_account ;
-    
-    return pin_account ;
+
+int pin_input()
+{
+    int pin;
+
+    cout << "Enter PIN : ";
+    cin >> pin;
+
+    return pin;
 }
 
-int main() {
-
+int main()
+{
     welcome();
 
     string name = name_input();
 
     int account_number = acc_number_input();
 
+    if (account_number != 1234)
+    {
+        cout << "\nAccount Not Found!\n";
+        return 0;
+    }
 
-    int pin ;
+    int pin;
 
-    
-   do{  
-    
-        pin = pin_account() ;
+    do
+    {
+        pin = pin_input();
 
-        cout << "  PLEASE ENTER YOUR PIN  ";
-        cin >> pin ;
-
-        if(pin != 7221)
+        if (pin != 7221)
         {
             cout << "Wrong PIN! Try Again.\n";
         }
 
-    }
-    while (pin != 7221);
+    } while (pin != 7221);
+
+    cout << "\nLogin Successful!\n";
+    cout << "Welcome, " << name << "!\n";
 
     return 0;
 }
-
-
-
-
-
 
 
 
