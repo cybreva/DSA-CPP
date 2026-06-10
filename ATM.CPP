@@ -14,6 +14,7 @@ int main (){
     int pin ;
     
     do{
+        
         cout << "  PLEASE ENTER YOUR PIN  ";
         cin >> pin ;
 
@@ -21,6 +22,7 @@ int main (){
         {
             cout << "Wrong PIN! Try Again.\n";
         }
+
     }
     while (pin != 7221);
 
