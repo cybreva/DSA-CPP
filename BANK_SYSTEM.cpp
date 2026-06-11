@@ -43,7 +43,26 @@ int pin_input()
 
     return pin;
 }
+int load_pin(){
 
+     ifstream file("pin.csv");
+
+    int pin;
+
+    file >> pin;
+
+    file.close();
+
+    return pin;
+}
+void save_pin(int pin)
+{
+    ofstream file("pin.csv");
+
+    file << pin;
+
+    file.close();
+}
 int check_balance(int balance)
 {
     cout << "\n===== ACCOUNT BALANCE =====\n";
@@ -131,7 +150,7 @@ int change_pin()
     cin >> new_pin;
 
     cout << "PIN Changed Successfully!\n";
-
+    
     return new_pin;
 }
 
@@ -219,7 +238,7 @@ int main()
         else if (choice == 4)
         {
             pin = change_pin();
-            
+            save_pin(pin);
         }
         else if (choice == 5){
             show_history();
