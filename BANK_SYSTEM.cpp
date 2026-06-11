@@ -128,7 +128,7 @@ int withdraw_money(int balance)
 
     return balance;
 }
-int change_pin()
+int change_pin(int saved_pin)
 {
     int old_pin;
 
@@ -137,12 +137,12 @@ int change_pin()
         cout << "Enter Old PIN : ";
         old_pin = pin_input();
 
-        if(old_pin != 7221)
+        if(old_pin != saved_pin)
         {
             cout << "Wrong PIN! Try Again.\n";
         }
 
-    } while(old_pin != 7221);
+    } while(old_pin != saved_pin);
 
     int new_pin;
 
@@ -150,7 +150,7 @@ int change_pin()
     cin >> new_pin;
 
     cout << "PIN Changed Successfully!\n";
-    
+
     return new_pin;
 }
 
@@ -191,18 +191,19 @@ int main()
         return 0;
     }
 
+    int saved_pin = load_pin();
     int pin;
 
     do
+{
+    pin = pin_input();
+
+    if (pin != saved_pin)
     {
-        pin = pin_input();
+        cout << "Wrong PIN! Try Again.\n";
+    }
 
-        if (pin != 7221)
-        {
-            cout << "Wrong PIN! Try Again.\n";
-        }
-
-    } while (pin != 7221);
+} while (pin != saved_pin);
 
     cout << "\nLogin Successful!\n";
     cout << "Welcome, " << name << "!\n";
@@ -237,8 +238,9 @@ int main()
         }
         else if (choice == 4)
         {
-            pin = change_pin();
+            pin = change_pin(saved_pin);
             save_pin(pin);
+            saved_pin = pin;  
         }
         else if (choice == 5){
             show_history();
