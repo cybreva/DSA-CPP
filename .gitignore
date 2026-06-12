@@ -1,5 +1,4 @@
-# removing binaries
-
+# removing binaries & extras 
 *.out
 hello
 new
@@ -20,3 +19,4 @@ BANK_SYSTEM
 *.env
 extra files
 array
+pointers
