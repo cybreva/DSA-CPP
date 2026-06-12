@@ -1,22 +1,44 @@
 #include <iostream>
 using namespace std ;
 
-struct Student{
+struct account{
     string name ;
-    int age ;
+    
+    int balance ;
 
 };
 
-int main()
-{
-    Student s1;
 
-    cout << "Enter Name: ";
-    cin >> s1.name;
+int main (){
 
-    cout << "Enter Age: ";
-    cin >> s1.age;
+    account user1 ;
 
-    cout << "\nName: " << s1.name << endl;
-    cout << "\nAge: " << s1.age << endl;
+    cout << "Name: ";
+    cin >> user1.name;
+
+    cout << "Balance: ";
+    cin >> user1.balance;
+
+    cout << "\nAccount Details\n";
+
+    cout << user1.name << endl;
+    cout << user1.balance << endl;
+
+    account user2;
+    cout << "Name: ";
+    cin >> user2.name;
+
+    cout << "Balance: ";
+    cin >> user2.balance;
+
+    cout << "\nAccount Details\n";
+
+    cout << user2.name << endl;
+    cout << user2.balance << endl;
+
+
+
+
+
+
 }
