@@ -19,4 +19,4 @@ BANK_SYSTEM
 *.env
 extra files
 array
-pointers
+pointer
