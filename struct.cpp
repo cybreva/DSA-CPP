@@ -1,20 +1,22 @@
 #include <iostream>
 using namespace std ;
 
-struct student{
+struct Student{
     string name ;
     int age ;
 
 };
 
-int main(){
+int main()
+{
+    Student s1;
 
-    student s1 ;
-        s1.name = "tanmay";
-        s1.age = 18;
+    cout << "Enter Name: ";
+    cin >> s1.name;
 
-    cout << s1.name << endl ;
-    cout << s1.age << endl ;
+    cout << "Enter Age: ";
+    cin >> s1.age;
 
-
+    cout << "\nName: " << s1.name << endl;
+    cout << "\nAge: " << s1.age << endl;
 }
