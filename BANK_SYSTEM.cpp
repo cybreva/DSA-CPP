@@ -224,33 +224,37 @@ int main()
         cout << "\nEnter Your Choice : ";
         cin >> choice;
 
-        if (choice == 1)
+       switch (choice)
         {
-            check_balance(balance);
-        }
-        else if (choice == 2)
-        {
-            balance = deposit_money(balance);
-        }
-        else if (choice == 3)
-        {
-            balance = withdraw_money(balance);
-        }
-        else if (choice == 4)
-        {
-            pin = change_pin(saved_pin);
-            save_pin(pin);
-            saved_pin = pin;  
-        }
-        else if (choice == 5){
-            show_history();
-        }
-        else if (choice == 6){
-            cout << "\nThank You For Using City Bank!\n";
-        }
-        else
-        {
-            cout << "\nInvalid Choice!\n";
+            case 1:
+                check_balance(balance);
+                break; 
+
+            case 2:
+                balance = deposit_money(balance);
+                break;
+
+            case 3:
+                balance = withdraw_money(balance);
+                break;
+
+            case 4:
+                pin = change_pin(saved_pin);
+                save_pin(pin);
+                saved_pin = pin;  
+                break;
+
+            case 5:
+                show_history();
+                break;
+
+            case 6:
+                cout << "\nThank You For Using City Bank!\n";
+                break;
+
+            default:
+                cout << "\nInvalid Choice! Try Again.\n";
+                break;
         }
 
     } while (choice != 6);
