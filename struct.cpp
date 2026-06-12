@@ -6,39 +6,45 @@ struct account{
     
     int balance ;
 
-};
+    int account_number;
 
+};
 
 int main (){
 
-    account user1 ;
+    account users[2];
 
+    for(int i = 0; i < 2; i++)
+{
     cout << "Name: ";
-    cin >> user1.name;
+    cin >> users[i].name;
+
+    cout << "Account Number: ";
+    cin >> users[i].account_number;
 
     cout << "Balance: ";
-    cin >> user1.balance;
+    cin >> users[i].balance;
 
-    cout << "\nAccount Details\n";
+    int search_account;
 
-    cout << user1.name << endl;
-    cout << user1.balance << endl;
+    cout << "\nEnter Account Number To Search: ";
+    cin >> search_account;
+}
 
-    account user2;
-    cout << "Name: ";
-    cin >> user2.name;
+    int search_account;
 
-    cout << "Balance: ";
-    cin >> user2.balance;
-
-    cout << "\nAccount Details\n";
-
-    cout << user2.name << endl;
-    cout << user2.balance << endl;
+    cout << "\nEnter Account Number To Search: ";
+    cin >> search_account;
 
 
+    for(int i = 0; i < 2; i++)
+{
+    if(users[i].account_number == search_account)
+    {
+        cout << "\nAccount Found\n";
 
-
-
-
+        cout << users[i].name << endl;
+        cout << users[i].balance << endl;
+    }
+}
 }
