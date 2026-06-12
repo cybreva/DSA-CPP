@@ -1,19 +1,17 @@
 #include <iostream>
-using namespace std;
+using namespace std
+
+void modifyArray(int arr[], int size) {
+    for(int i = 0; i < size; i++) {
+        arr[i] += 5;
+    }
+}
 
 int main() {
-    int arr[5];
-
-    for (int i = 0; i < 5; i++) {
-        cout << "Enter number " << i << ": ";
-        cin >> arr[i];
-    }
-
-    cout << "You entered: ";
-
-    for (int i = 0; i < 5; i++) {
+    int arr[3] = {1, 2, 3};
+    modifyArray(arr, 3);
+    for(int i = 0; i < 3; i++) {
         cout << arr[i] << " ";
     }
-
     return 0;
 }
