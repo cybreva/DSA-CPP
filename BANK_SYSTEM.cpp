@@ -1,8 +1,15 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
+
 
 using namespace std;
+
+
+
+
+
 
 void save_transaction(string type, int amount);
 void show_history();
@@ -13,6 +20,7 @@ void welcome()
     cout << "      WELCOME TO CITY BANK      \n";
     cout << "================================\n";
 }
+
 
 string name_input()
 {
@@ -33,6 +41,8 @@ int acc_number_input()
 
     return account_number;
 }
+
+
 
 int pin_input()
 {
@@ -180,6 +190,8 @@ void show_history()
 int main()
 {
     welcome();
+
+    
 
     string name = name_input();
 

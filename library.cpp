@@ -25,57 +25,53 @@ string librarian_name_input(){
     return lib_name;
 
 }
-int librarian_id_input(){
-    librariandata librarian ;
-    cout << "PLEASE ENTER YOUR ADMIN_ID : ";
-    cin >> librarian.librarian_id ;
-    int &lib_id = librarian.librarian_id;
+int librarian_id_input()
+{
+    int lib_id;
     int attempts = 0;
 
     while(attempts < 3)
     {
+        cout << "PLEASE ENTER YOUR ADMIN_ID : ";
         cin >> lib_id;
 
         if(lib_id == 12345)
         {
             cout << "DATA FETCHED\n";
-            break;
+            return lib_id;
         }
-        else {
-            cout << "NO ACCOUNT OF THIS ID EXIST IN DATABASE \nIF YOU ARE A NON REGISTERED MEMBER CONTACT TO ADMIN ASAP!\n";
-              
-        }
+
+        cout << "NO ACCOUNT OF THIS ID EXIST IN DATABASE\n";
+        cout << "IF YOU ARE A NON REGISTERED MEMBER CONTACT TO ADMIN ASAP!\n";
 
         attempts++;
     }
-    return lib_id;
 
+    return -1;
 }
-int librarian_pin_input(){
-    librariandata librarian ;
-    cout << "PLEASE ENTER YOUR PIN : ";
-    cin >> librarian.librarian_pin ;
-    int &lib_pass = librarian.librarian_pin ;
-    int attempts = 0 ;
-    
+int librarian_pin_input()
+{
+    int lib_pass;
+    int attempts = 0;
+
     while(attempts < 3)
     {
+        cout << "PLEASE ENTER YOUR PIN : ";
         cin >> lib_pass;
 
         if(lib_pass == 12345)
         {
-            cout << "LOGINS SUCCESSFULL\n";
-            break;
+            cout << "LOGIN SUCCESSFUL\n";
+            return lib_pass;
         }
-        else {
-            cout << "INCORRECT PASSWORD \nIF YOU FORGET YOUR PASSWORD CONTACT TO ADMIN ASAP!\n";
-              
-        }
+
+        cout << "INCORRECT PASSWORD!\n";
+        cout << "PLEASE CONTACT THE SYSTEM ADMINISTRATOR IF YOU HAVE FORGOTTEN YOUR PASSWORD.\n";
 
         attempts++;
     }
-    return lib_pass;
 
+    return -1;
 }
 string get_current_date()
 {
@@ -90,20 +86,44 @@ string get_current_date()
 void issue_book()
 {
     userdata user;
-    
-    ofstream file("history.csv", ios::app);
-    
+
     cout << "Enter User Name : ";
-    file << user.user_name;
+    cin.ignore();
+    getline(cin, user.user_name);
+
 
     cout << "Enter Book Name : ";
-    file << ","<<;
-    
+    cin.ignore();
+    getline(cin, user.book_name);
 
-    file << type << "," << amount << "\n";
+    string issue_date = get_current_date();
+
+    ofstream file("userdata.csv", ios::app);
+
+    file << user.user_name << ","
+         << user.book_name << ","
+         << issue_date << "\n";
+
+    file.close();
+
+    cout << "Book Issued Successfully!\n";
+}
+void view_records()
+{
+    ifstream file("userdata.csv");
+
+    string line;
+
+    cout << "\n===== RECORDS =====\n";
+
+    while(getline(file, line))
+    {
+        cout << line << endl;
+    }
 
     file.close();
 }
+
 
 
 int main (){
@@ -115,36 +135,36 @@ int main (){
     cout << "           WELCOME         \n";
     cout << "===========================\n";
 
+    int choice ;   
     
-     do
+    do
+{
+    cout << "\n\n===== LIBRARY MENU =====\n";
+    cout << "1. Issue Book\n";
+    cout << "2. View Records\n";
+    cout << "3. Exit\n";
+
+    cout << "\nEnter Your Choice : ";
+    cin >> choice;
+
+    switch(choice)
     {
-        cout << "\n\n===== ATM MENU =====\n";
-        cout << "1. Issue Book\n";
-        cout << "2. Check Record\n";
-        cout << "3. Exit\n";
+        case 1:
+            issue_book();
+            break;
 
-        cout << "\nEnter Your Choice : ";
-        cin >> choice;
+        case 2:
+            view_records();
+            break;
 
-       switch (choice)
-        {
-            case 1:
-                check_balance(balance);
-                break; 
+        case 3:
+            cout << "\nThank You For Using Library System!\n";
+            break;
 
-            case 2:
-                balance = deposit_money(balance);
-                break;
+        default:
+            cout << "\nInvalid Choice! Try Again.\n";
+            break;
+    }
 
-            case 3:
-                balance = withdraw_money(balance);
-                break;
-
-            
-            default:
-                cout << "\nInvalid Choice! Try Again.\n";
-                break;
-        }
-
-    } while (choice != 3);
+} while(choice != 3);;
 }
