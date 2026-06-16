@@ -5,6 +5,7 @@ using namespace std ;
 
 int main(){
 
+    
     vector<int> numbers;
 
     numbers.push_back(10);

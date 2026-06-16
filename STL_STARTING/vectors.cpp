@@ -19,7 +19,7 @@ int main (){
     for(int i = 0; i < 2; i++)
     {
         account temp;
-        cout << "enter your detials : \n name \n account number \n balance \n ";
+        cout << "enter your details : \n name \n account number \n balance \n ";
         cin >> temp.name;
         cin >> temp.account_number;
         cin >> temp.balance;
