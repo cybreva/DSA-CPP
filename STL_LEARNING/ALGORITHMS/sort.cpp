@@ -29,7 +29,9 @@ int main(){
     sort_vector(x);
     display(x);
     auto it = x.begin();
-    it++;
+
+   
+    
     cout << *it ;
 
 }
