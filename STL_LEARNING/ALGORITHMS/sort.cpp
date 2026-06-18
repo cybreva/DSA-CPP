@@ -5,7 +5,7 @@
 using namespace std;
 
 void sort_vector(vector<int> &nums){
-    sort(nums.begin(), nums.end()-1);
+    sort(nums.begin(), nums.end());
 }
 
 
