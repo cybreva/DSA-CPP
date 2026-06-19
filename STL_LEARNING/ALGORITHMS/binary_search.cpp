@@ -30,6 +30,30 @@ void search(vector <int> &nums)
 
     
 }
+void to_insert(vector <int> &nums){
+
+    int target ;
+    cout << "Please enter the number you want to add : " << flush; 
+    cin >> target ;
+
+    auto it = lower_bound
+    (
+        nums.begin(),
+        nums.end(),
+        target
+    );
+    int index = it-nums.begin() ;
+
+    cout << "Suggested index can be  : " << index << "\n" << flush ;
+
+    
+
+    nums.insert(
+        nums.begin() + index ,
+        target
+    );
+    
+}
 int main (){
 
 
@@ -40,4 +64,5 @@ int main (){
 
     sort_vector(x);
     search(x);
+    to_insert(x);
 }
