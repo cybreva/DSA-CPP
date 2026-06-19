@@ -30,29 +30,32 @@ void search(vector <int> &nums)
 
     
 }
-void to_insert(vector <int> &nums){
+void Lower_bound(vector <int> &nums , int &num){
 
-    int target ;
-    cout << "Please enter the number you want to add : " << flush; 
-    cin >> target ;
+    
 
     auto it = lower_bound
     (
         nums.begin(),
         nums.end(),
-        target
+        num
     );
     int index = it-nums.begin() ;
 
-    cout << "Suggested index can be  : " << index << "\n" << flush ;
+    //cout << "Suggested index can be  : " << index << "\n" << flush ;
 
+    cout << " index suggested by lower_bound : " << index << "\n" << flush ; 
     
 
-    nums.insert(
-        nums.begin() + index ,
-        target
+    auto it2 = upper_bound
+    (
+        nums.begin(),
+        nums.end(),
+        num
     );
-    
+    int index2 = it2-nums.begin() ;
+
+    cout << " index suggested by upper_bound : " << index2 << "\n" << flush ; 
 }
 int main (){
 
@@ -60,9 +63,16 @@ int main (){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    vector <int> x = {1213, 1231,43212,3454,5434,564,1234,7,686,3456,87,3,46,5,4,2} ;
+    vector <int> x = {10,20,20,20,30,40} ;
 
     sort_vector(x);
     search(x);
-    to_insert(x);
+
+
+    int target ;
+    cout << "Please enter the number you want to add : " << flush; 
+    cin >> target ;
+
+
+    Lower_bound(x,target);
 }
