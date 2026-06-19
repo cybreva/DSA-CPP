@@ -54,13 +54,14 @@ Currently exploring STL and algorithm-related concepts while building a strong f
 ## Upcoming Topics
 
 * Pointers
-* Structures
-* OOP
-* File Handling
+* Dynamic Memory Allocation
 * Recursion
 * Advanced STL
+* Object-Oriented Programming (OOP)
 * Data Structures
-* Algorithms
+* Searching Algorithms
+* Sorting Algorithms
+* Problem Solving
 
 ## Notes
 
