@@ -32,3 +32,5 @@ sort
 find 
 reverse
 binary_search
+binary_search_bounds
+more_on_bounds
