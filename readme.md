@@ -1,59 +1,67 @@
 # DSA-CPP
 
-My C++ learning repository.
+A repository documenting my journey of learning C++ and preparing for Data Structures & Algorithms.
 
-This repository contains all the programs, experiments, mini-projects, and practice files I create while learning C++ and preparing for Data Structures & Algorithms.
+This repository contains practice programs, experiments, mini-projects, STL exercises, and everything else I build while improving my programming and problem-solving skills.
 
-## Current Topics Covered
+## Topics Covered
 
-* Basic C++ Syntax
-* Input / Output (`cin`, `cout`)
+### C++ Fundamentals
+
 * Variables and Data Types
-* Strings
-* If / Else Statements
-* Switch Case
-* For Loops
-* While Loops
-* Do While Loops
-* Nested Loops
-* Pattern Printing
-
-## Mini Projects
-
-### BMI Calculator
-
-Calculates BMI based on height and weight and displays the health category.
-
-### Mini Calculator
-
-Performs basic arithmetic operations using a menu-driven interface.
-
-### ATM Program
-
-Simple ATM simulation with PIN verification using a do-while loop.
-
-## Repository Goal
-
-The purpose of this repository is to:
-
-* Learn modern C++
-* Build problem-solving skills
-* Prepare for Data Structures & Algorithms
-* Practice programming consistently
-* Track progress publicly through GitHub
-
-## Future Topics
-
+* Input / Output
+* Conditional Statements
+* Loops
 * Functions
+* Strings
 * Arrays
 * Vectors
+
+### STL
+
+* Iterators
+* sort()
+* find()
+* count()
+* reverse()
+* binary_search()
+* lower_bound()
+* upper_bound()
+* equal_range()
+
+### Projects
+
+* BMI Calculator
+* Mini Calculator
+* ATM System
+* Bank Management System
+* Library Management System
+
+## Purpose
+
+The goal of this repository is to:
+
+* Learn modern C++
+* Strengthen problem-solving skills
+* Prepare for DSA
+* Build consistency through practice
+* Track progress over time
+
+## Current Progress
+
+Currently exploring STL and algorithm-related concepts while building a strong foundation in C++.
+
+## Upcoming Topics
+
 * Pointers
 * Structures
-* Object-Oriented Programming (OOP)
+* OOP
 * File Handling
-* STL
-* DSA Concepts
+* Recursion
+* Advanced STL
+* Data Structures
+* Algorithms
 
-## Note
+## Notes
 
-This repository is a personal learning journal. Code quality, structure, and complexity will improve as I progress through my C++ journey.
+This repository serves as a personal learning log. The code, project structure, and problem-solving approaches will continue to improve as I learn more.
