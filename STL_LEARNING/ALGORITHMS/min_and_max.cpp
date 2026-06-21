@@ -10,7 +10,7 @@ using namespace std;
 4. index print karo
 5. duplicate min/max test karo*/
 
-void minelement(vector <int> &nums){
+void min_value(vector <int> &nums){
     auto it = min_element(
         nums.begin() ,
         nums.end() 
@@ -19,7 +19,7 @@ void minelement(vector <int> &nums){
     cout << "\nthe minimum value in the vector is : " << *it << " and its index is : " << it-nums.begin() << "\n" << flush;
 }
 
-void maxelement(vector <int> &nums){
+void max_value(vector <int> &nums){
     auto it = max_element(
         nums.begin() ,
         nums.end() 
@@ -33,7 +33,7 @@ int main(){
     cin.tie(nullptr);
 
     vector <int> x = {10, 100, 123, 4321, 5432,123, 534,10 ,1 , 1343, 21,42,3,2,1} ;
-    minelement(x);
-    maxelement(x);
+    min_value(x);
+    max_value(x);
     
 }
