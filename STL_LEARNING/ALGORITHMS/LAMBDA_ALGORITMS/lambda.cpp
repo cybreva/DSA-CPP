@@ -46,7 +46,7 @@ int main(){
     ios :: sync_with_stdio(false);
     cin.tie(nullptr);
 
-    /*vector <int> x = {12,1,12,1,2,12,1,21,2,1,3,24,0,5,6,547,8,78,9} ;
+    vector <int> x = {12,1,12,1,2,12,1,21,2,1,3,24,0,5,6,547,8,78,9} ;
     vector <int> y = {10,20,30} ;
     vector <int> z = {1,3,5,7,9,99,77,55,35,33,131,11} ;
     allof(x);
@@ -67,7 +67,7 @@ int main(){
     }
     
     );
-    cout << "\n" << flush ; */
+    cout << "\n" << flush ; 
 
 
     vector<int> I = {5,10,15};
