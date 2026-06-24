@@ -2,12 +2,20 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <sstream>
 
 
 using namespace std;
 
 
+struct variables{
 
+    string name ;
+    int account_number ;
+    string pin ;
+    int account_balance ;
+     
+};
 
 
 
@@ -30,6 +38,41 @@ string name_input()
     cin >> name;
 
     return name;
+}
+
+vector<variables> load_database_clients() {
+
+    ifstream file("database_clients.csv");
+    vector<variables> clients;
+
+    if (!file.is_open()) {
+        cout << "DATA NOT FETCHED\n";
+        return clients;
+    }
+
+    string line;
+
+    while (getline(file, line)) {
+
+        variables client;
+
+        stringstream ss(line);
+
+        string account_number;
+        
+
+        getline(ss, client.name, ',');
+        getline(ss, account_number, ',');
+        getline(ss, client.pin, ',');
+        
+
+        client.account_number = stoi(account_number);
+        
+
+        clients.push_back(client);
+    }
+
+    return clients;
 }
 
 int acc_number_input()
@@ -84,7 +127,13 @@ int load_balance(){
 
      ifstream file("balance.txt");
 
+    if(!file.is_open())
+    {
+        return 0;
+    }
+    
     int balance;
+
 
     file >> balance;
 
@@ -108,6 +157,12 @@ int deposit_money(int balance)
     cout << "\nEnter Amount To Deposit : $";
     cin >> amount;
 
+    if(amount <= 0)
+    {
+        cout << "Invalid amount\n";
+        return balance;
+    }
+
     balance = balance + amount;
     save_balance(balance);
     cout << "Money Deposited Successfully!\n";
@@ -122,6 +177,12 @@ int withdraw_money(int balance)
 
     cout << "\nEnter Amount To Withdraw : $";
     cin >> amount;
+    
+    if(amount <= 0)
+    {
+        cout << "Invalid amount\n";
+        return balance;
+    }
 
     if (amount <= balance)
     {
