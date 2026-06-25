@@ -121,10 +121,4 @@ int main(){
     cout << "\n" << flush ;
 
 
-
-
-
-
-
-
 }
