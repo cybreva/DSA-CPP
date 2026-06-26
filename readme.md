@@ -1,68 +1,68 @@
-# DSA-CPP
+# 🚀 DSA-CPP
 
-A repository documenting my journey of learning C++ and preparing for Data Structures & Algorithms.
+A repository documenting my journey of learning C++ and preparing for Data Structures & Algorithms (DSA). 
 
-This repository contains practice programs, experiments, mini-projects, STL exercises, and everything else I build while improving my programming and problem-solving skills.
+This repository contains practice programs, core language concepts, STL experiments, and mini-projects that I build while strengthening my logical base and problem-solving skills.
 
-## Topics Covered
+---
 
-### C++ Fundamentals
+## 📂 Repository Structure
 
-* Variables and Data Types
-* Input / Output
-* Conditional Statements
-* Loops
-* Functions
-* Strings
-* Arrays
-* Vectors
+*   **`CPP_CORE/`**: Focuses on core C++ language fundamentals, syntax, and basic logic.
+*   **`STL_LEARNING/`**: Deep dive into the Standard Template Library (STL)—practicing algorithms, iterators, and structures.
+*   **`PROJECTS/`**: Hands-on mini-projects to apply C++ concepts in real-world scenarios.
 
-### STL
+---
 
-* Iterators
-* sort()
-* find()
-* count()
-* reverse()
-* binary_search()
-* lower_bound()
-* upper_bound()
-* equal_range()
+## 🧠 Topics Covered & Progress
 
-### Projects
+### 🧱 C++ Fundamentals
+*   Variables, Constants & Data Types
+*   Input / Output Streams (`cin`, `cout`)
+*   Conditional Statements & Logic (`if-else`, `switch`)
+*   Loops (`for`, `while`, `do-while`)
+*   Functions (Pass by Value vs Pass by Reference)
+*   Strings & Multidimensional Arrays
+*   **Vectors** (Dynamic Arrays)
 
-* BMI Calculator
-* Mini Calculator
-* ATM System
-* Bank Management System
-* Library Management System
+### ⚡ STL Algorithms (Mastered on Vectors)
+I have deeply practiced and implemented the following algorithms using vector iterators:
 
-## Purpose
+*   **Searching & Bounds:** `find()`, `binary_search()`, `lower_bound()`, `upper_bound()`, `equal_range()`
+*   **Utility & Counting:** `count()`, `count_if()`, `find_if()`
+*   **Modifying & Copying:** `copy()`, `copy_if()`, `transform()`, `replace()`, `replace_if()`
+*   **Rearranging & Removing:** `sort()`, `reverse()`, `remove()`, `remove_if()`
+*   **Aggregates & Iteration:** `accumulate()`, `min_element()`, `max_element()`, `for_each()`
+*   **Logical Checkers:** `all_of()`, `any_of()`, `none_of()`
 
-The goal of this repository is to:
+### 🛠️ Hands-on Projects
+*   📊 BMI Calculator
+*   🧮 Mini Calculator
+*   🏧 ATM System Simulation
+*   🏦 Bank Management System
+*   📚 Library Management System
 
-* Learn modern C++
-* Strengthen problem-solving skills
-* Prepare for DSA
-* Build consistency through practice
-* Track progress over time
+---
 
-## Current Progress
+## ⏳ Current Roadmap
 
-Currently exploring STL and algorithm-related concepts while building a strong foundation in C++.
+- [x] Master Core C++ Fundamentals
+- [x] Implement 20+ Core STL Algorithms on Vectors
+- [ ] **Next Up:** `fill()`, `fill_n()`, `generate()`, `generate_n()`, `partition()`, `stable_partition()`
+- [ ] **Next Up:** STL Containers (`vector`, `list`, `set`, `map`, `unordered_map`)
+- [ ] Pointers & Dynamic Memory Allocation (DMA)
+- [ ] Recursion & Backtracking
+- [ ] Object-Oriented Programming (OOP)
+- [ ] Core Data Structures (Arrays, Linked Lists, Stacks, Queues, Trees, Graphs)
 
-## Upcoming Topics
+---
 
-* Pointers
-* Dynamic Memory Allocation
-* Recursion
-* Advanced STL
-* Object-Oriented Programming (OOP)
-* Data Structures
-* Searching Algorithms
-* Sorting Algorithms
-* Problem Solving
+## 🎯 Purpose & Goals
 
-## Notes
+*   **Build a Rock-Solid Foundation:** Master modern C++ memory management and optimization.
+*   **Production-Ready Logic:** Shift from standard syntax to using robust STL tools.
+*   **Interview Prep:** Transition seamlessly into hardcore DSA and system design problems.
+*   **Consistency:** Tracking progress through clean commits daily.
 
-This repository serves as a personal learning log. The code, project structure, and problem-solving approaches will continue to improve as I learn more.
+---
+*This repository serves as my personal code laboratory. The structure and optimization of code will continuously improve as I climb higher up the DSA ladder.*
