@@ -27,6 +27,8 @@ int main()
     
     cout << "\n" << flush ;
 
+    cout << "\n" << flush ;
+
 
     fill
     (
