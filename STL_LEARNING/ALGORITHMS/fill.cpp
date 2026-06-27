@@ -24,8 +24,6 @@ int main()
     );
 
     cout << "\n" << flush ; 
-    
-    cout << "\n" << flush ;
 
     cout << "\n" << flush ;
 
@@ -72,4 +70,29 @@ int main()
     cout << "\n" << flush ;
 
 
+    vector<int> g(5);
+
+    int value = 10;
+
+    generate
+    (
+        g.begin(),
+        g.end(),
+        [&](){
+            return value += 10;
+        }
+    );
+
+    for_each
+    (
+        g.begin(),
+        g.end(),
+        [](int n){
+        cout << "" << n << " " << flush;
+        }
+    );
+
+    cout << "\n" << flush ; 
+    
+    cout << "\n" << flush ;
 }
