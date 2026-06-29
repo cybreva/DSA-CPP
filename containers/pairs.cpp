@@ -9,6 +9,6 @@ int main(){
 
     pair<int, int> p = {10, 20};
     p.first += 5;
-    cout << p.first << " " << p.second;
+    cout << p.first << " " << p.second << "\n" << flush ;
 
 }
