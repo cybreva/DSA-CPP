@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(){
-    array<int,1000> a;
+    array<int,1000> a{};
     vector<int> v(1000);
 
     int sum ;
