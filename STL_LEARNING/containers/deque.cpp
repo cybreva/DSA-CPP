@@ -10,4 +10,5 @@ int main(){
     x.push_front(100000);
     x.push_back(1212);
 
+    
 }
