@@ -46,3 +46,4 @@ copy_and_copy_if
 fill 
 pairs
 array
+deque
