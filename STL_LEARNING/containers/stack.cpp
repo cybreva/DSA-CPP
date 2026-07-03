@@ -1,7 +1,5 @@
 #include <iostream>
 #include <stack>
-#include <algorithm>
-#include <iterator>
 
 using namespace std;
 
@@ -28,19 +26,27 @@ int main(){
     st.pop();
     st.pop();
 
-    //others
+    // Stack information
 
-    st.top();
-    st.empty();
-    st.size();
+    int top_value = st.top();
+    cout << "the value at top is : " << top_value << " \n " ;
+    bool is_empty = st.empty();
 
+    cout << "Is the stack empty : " << boolalpha << is_empty << '\n';
+    
+    size_t stack_size = st.size();
+    cout << "the size of stack : " << stack_size << " \n " ;
+    
+    //temporary stack
     stack<int> temporary_stack = st;
+    
     //display
 
-    while (!st.empty()){
-        cout << st.top() << "" ;
-        st.pop();
+    while (!temporary_stack.empty())
+    {
+        cout << temporary_stack.top() << ' ';
+        temporary_stack.pop();
     }
 
-    
+    cout << '\n';
 }
