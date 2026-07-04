@@ -24,9 +24,9 @@ int main(){
             
     bool isEmpty = pq.empty(); 
     if(!isEmpty){
-        cout << "the priority queue is empty : " << "yes !" << "\n" ;
+        cout << "the priority queue is empty : " << "no !" << "\n" ;
     }     
-    else {cout << "the priority queue is empty : " << "no !" << "\n" ;}
+    else {cout << "the priority queue is empty : " << "yes !" << "\n" ;}
     size_t size = pq.size();  
     cout << "size of priority queue is  : " << size << "\n" ;     
     
