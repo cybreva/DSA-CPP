@@ -50,3 +50,4 @@ deque
 list
 stack
 queue
+priority_queue
