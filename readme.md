@@ -1,71 +1,185 @@
+![Language](https://img.shields.io/badge/Language-C++-blue.svg)
+![Commits](https://img.shields.io/badge/Commits-140%2B-brightgreen)
+![Status](https://img.shields.io/badge/Status-Learning-orange)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 # 🚀 DSA-CPP
 
-A repository documenting my journey of learning C++ and preparing for Data Structures & Algorithms (DSA).
+A repository documenting my journey of learning **Modern C++** and preparing for **Data Structures & Algorithms (DSA)**.
 
-This repository contains practice programs, core language concepts, STL experiments, and mini-projects that I build while strengthening my logical base and problem-solving skills.
+This repository is my personal learning log where I practice C++ fundamentals, STL algorithms, STL containers, and build mini-projects while improving my problem-solving skills one commit at a time.
 
----
-
-## 📂 Repository Structure
-
-* **`CPP_CORE/`**: Focuses on core C++ language fundamentals, syntax, and basic logic.
-* **`STL_LEARNING/`**: Deep dive into the Standard Template Library (STL)—practicing algorithms, iterators, and structures.
-* **`PROJECTS/`**: Hands-on mini-projects to apply C++ concepts in real-world scenarios.
+> 💡 Every concept is learned by writing code, experimenting, fixing bugs, and committing the progress.
 
 ---
 
-## 🧠 Topics Covered & Progress
+# 📂 Repository Structure
 
-### 🧱 C++ Fundamentals
-
-* Variables, Constants & Data Types
-* Input / Output Streams (`cin`, `cout`)
-* Conditional Statements & Logic (`if-else`, `switch`)
-* Loops (`for`, `while`, `do-while`)
-* Functions (Pass by Value vs Pass by Reference)
-* Strings & Multidimensional Arrays
-* **Vectors** (Dynamic Arrays)
-
-### ⚡ STL Algorithms (Mastered on Vectors)
-
-I have deeply practiced and implemented the following algorithms using vector iterators:
-
-* **Searching & Bounds:** `find()`, `binary_search()`, `lower_bound()`, `upper_bound()`, `equal_range()`
-* **Utility & Counting:** `count()`, `count_if()`, `find_if()`
-* **Modifying & Copying:** `copy()`, `copy_if()`, `transform()`, `replace()`, `replace_if()`
-* **Rearranging & Removing:** `sort()`, `reverse()`, `remove()`, `remove_if()`
-* **Aggregates & Iteration:** `accumulate()`, `min_element()`, `max_element()`, `for_each()`
-* **Logical Checkers:** `all_of()`, `any_of()`, `none_of()`
-
-### 🛠️ Hands-on Projects
-
-* 📊 BMI Calculator
-* 🧮 Mini Calculator
-* 🏧 ATM System Simulation
-* 🏦 Bank Management System
-* 📚 Library Management System
+```
+CPP_DSA_LEARNING/
+│
+├── CPP_CORE/            # Core C++ fundamentals
+├── STL_LEARNING/
+│   ├── algorithms/      # STL Algorithms
+│   └── containers/      # STL Containers
+│
+└── PROJECTS/            # Mini Projects
+```
 
 ---
 
-## ⏳ Current Roadmap
+# 🧠 C++ Topics Covered
 
-* [x] Master Core C++ Fundamentals
-* [x] Implement 20+ Core STL Algorithms on Vectors
-* [ ] **Next Up:** `fill()`, `fill_n()`, `generate()`, `generate_n()`, `partition()`, `stable_partition()`
-* [ ] **Next Up:** STL Containers (`vector`, `list`, `set`, `map`, `unordered_map`)
-* [ ] Pointers & Dynamic Memory Allocation (DMA)
-* [ ] Recursion & Backtracking
-* [ ] Object-Oriented Programming (OOP)
-* [ ] Core Data Structures (Arrays, Linked Lists, Stacks, Queues, Trees, Graphs)
+### ✅ Core C++
+
+- Variables & Data Types
+- Input / Output
+- Operators
+- Conditional Statements
+- Loops
+- Functions
+- References
+- Arrays
+- Strings
+- Structures
+- File Handling
+- Basic Problem Solving
+
+---
+
+# ⚡ STL Algorithms Practiced
+
+### Searching
+
+- `find()`
+- `find_if()`
+- `binary_search()`
+- `lower_bound()`
+- `upper_bound()`
+- `equal_range()`
+
+### Counting
+
+- `count()`
+- `count_if()`
+
+### Modification
+
+- `replace()`
+- `replace_if()`
+- `transform()`
+- `copy()`
+- `copy_if()`
+
+### Removal
+
+- `remove()`
+- `remove_if()`
+- Erase-Remove Idiom
+
+### Sorting & Ordering
+
+- `sort()`
+- `reverse()`
+- `unique()`
+
+### Utilities
+
+- `fill()`
+- `fill_n()`
+- `generate()`
+- `accumulate()`
+- `min_element()`
+- `max_element()`
+- `for_each()`
+
+### Predicate Algorithms
+
+- `all_of()`
+- `any_of()`
+- `none_of()`
 
 ---
 
-## 🎯 Purpose & Goals
+# 📦 STL Containers Covered
 
-* **Build a Rock-Solid Foundation:** Master modern C++ memory management and optimization.
-* **Production-Ready Logic:** Shift from standard syntax to using robust STL tools.
-* **Interview Prep:** Transition seamlessly into hardcore DSA and system design problems.
-* **Consistency:** Tracking progress through clean commits daily.
+- ✅ `std::vector`
+- ✅ `std::array`
+- ✅ `std::deque`
+- ✅ `std::list`
+- ✅ `std::stack`
+- ✅ `std::queue`
+
+Each container repository contains practical examples of:
+
+- Construction
+- Iterators (where applicable)
+- Insertion
+- Deletion
+- Traversal
+- Important member functions
+- Common operations
 
 ---
-*This repository serves as my personal code laboratory. The structure and optimization of code will continuously improve as I climb higher up the DSA ladder.*
+
+# 🛠️ Mini Projects
+
+- 🧮 Mini Calculator
+- 📊 BMI Calculator
+- 🏧 ATM System
+- 🏦 Bank Management System
+- 📚 Library Management System
+
+---
+
+# 📈 Current Progress
+
+- ✅ Core C++ Fundamentals
+- ✅ References
+- ✅ Arrays
+- ✅ Structures
+- ✅ File Handling
+- ✅ 20+ STL Algorithms
+- ✅ Sequence Containers
+- ✅ Container Adaptors (Stack & Queue)
+
+---
+
+# 🎯 Upcoming Topics
+
+- 🔄 `priority_queue`
+- 🌳 `set`
+- 🌳 `multiset`
+- 🗺️ `map`
+- 🗺️ `multimap`
+- ⚡ `unordered_set`
+- ⚡ `unordered_map`
+- 🔗 Iterators in depth
+- 🧠 Recursion
+- 📚 Object-Oriented Programming
+- 🌲 Trees
+- 📊 Graphs
+- ⚡ Advanced DSA
+
+---
+
+# 📊 Repository Stats
+
+- 💻 140+ commits
+- 📚 Daily learning log
+- 🧪 Concept-first approach
+- 🛠️ Hands-on implementation instead of theory only
+
+---
+
+# 🎯 Goal
+
+This repository is more than a collection of C++ programs.
+
+It is a public record of my journey from learning the language to mastering Data Structures & Algorithms through consistent practice, experimentation, debugging, and continuous improvement.
+
+Every commit represents one more step forward.
+
+---
+
+⭐ If you find this repository useful or enjoy following the journey, feel free to star it.
