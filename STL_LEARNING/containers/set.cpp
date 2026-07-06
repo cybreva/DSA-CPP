@@ -31,14 +31,47 @@ int main(){
     st.insert(354765);
     st.insert(33455);
 
-    //display a fucntion
+    //multiset declaraton
+    mst.insert(10);
+    mst.insert(3);
+    mst.insert(7);
+    mst.insert(10);
+    mst.insert(3);
+    mst.insert(2321);
+    mst.insert(31312);
+    mst.insert(343225);
+    mst.insert(354);
+    mst.insert(3465);
+    mst.insert(334);
+    mst.insert(33765);
+    mst.insert(33567);
+    mst.insert(3357);
+    mst.insert(33765);
+    mst.insert(3365);
+    mst.insert(33765);
+    mst.insert(33765);
+    mst.insert(33765);
+    mst.insert(3354343);
+    mst.insert(33765);
+    mst.insert(354765);
+    mst.insert(33455);
+    
+
+    //display set f
      cout << "Set elements: ";
     for (auto x : st)
         cout << x << " ";
 
     cout << "\n";
 
-    //fucntions
+    // display multiset
+     cout << "Multiset elements: ";
+    for (auto x : mst)
+        cout << x << " ";
+
+    cout << "\n";
+    
+
     
    
 
