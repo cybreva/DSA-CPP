@@ -13,7 +13,7 @@ ATM
 project
 file_handling
 *.txt
-*tempCodeRunnerFile.cpp
+tempCodeRunnerFile.cpp
 BANK_SYSTEM
 *.csv
 *.env
@@ -52,3 +52,4 @@ stack
 queue
 priority_queue
 set 
+unordered_set
