@@ -20,11 +20,3 @@ int main(){
    
     cout << " the largest number is  : '"  << Largest << "'  \n"  << " and the second largest number is : '" << secondLargest << "' \n" << flush ;
 }
-
-
-
-
-
-
-
-
