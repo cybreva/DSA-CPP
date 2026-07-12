@@ -24,8 +24,6 @@ int main(){
                 firstIndex = i ;
                
             }
-            
-
         }
     }
     if(count > 0)
