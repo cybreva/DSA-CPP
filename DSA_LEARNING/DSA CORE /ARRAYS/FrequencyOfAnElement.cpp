@@ -5,11 +5,13 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     
-    int arr[] = {42, -15, 0, 73, 18,-8, 91, 24, 7, -33,56, 101, 2, -44, 19,88, 13, 0, -71, 64};
+    int arr[] = {42, 17, -8, 42, 0, 91, -15, 17, 63, 5,-8, 29, 91, 73, 0, -44, 29, 18, 56, 73,99, -1, 5, 42, 88, -15, 64, 18, 99, 2,37, -44, 81, 56, 13, 5, 91, -8, 27, 64,0, 73, 42, 19, 81, -1, 88, 29, 17, 63};
     size_t n = sizeof(arr)/sizeof(arr[0]) ;
     int count = 0 ;
     int target ;
     cout << "enter he target >>> " << flush ;
+    int firstIndex = -1 ;
+    
     cin >> target ;
 
     for(int i = 0 ; i < n ; i++)
@@ -17,11 +19,16 @@ int main(){
         if(arr[i] == target )
         {
             count++ ;
+            if(firstIndex == -1){
+                firstIndex = i ;
+               
+            }
+
         }
     }
     if(count!=0 )
-    {
-        cout << "Frequency of " << target << " is : " << count << '\n'  ;
+    {   
+        cout << "Frequency of " << target << " is : " << count << " and its first index is : " << firstIndex << '\n'  ;
     }
     else
     {
