@@ -11,7 +11,7 @@ int main(){
     int target ;
     cout << "enter he target >>> " << flush ;
     int firstIndex = -1 ;
-    
+    int lastIndex = -1;
     cin >> target ;
 
     for(int i = 0 ; i < n ; i++)
@@ -19,16 +19,18 @@ int main(){
         if(arr[i] == target )
         {
             count++ ;
+            lastIndex = i ;
             if(firstIndex == -1){
                 firstIndex = i ;
                
             }
+            
 
         }
     }
-    if(count!=0 )
+    if(count > 0)
     {   
-        cout << "Frequency of " << target << " is : " << count << " and its first index is : " << firstIndex << '\n'  ;
+        cout << "Frequency of " << target << " is : " << count << " and its first index is : " << firstIndex << " and its last index is : " << lastIndex << '\n'  ;
     }
     else
     {
