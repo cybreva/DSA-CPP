@@ -5,19 +5,26 @@ int main(){
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     
-    int StockPrice[] = {7,1,5,3,6,4} ;
-    size_t n = sizeof(StockPrice)/sizeof(StockPrice[0]) ;
-    int MaxProfit = 0 ;
-    for(int i = 0 ; i < n ; i ++)
+    vector<int> prices = {7,1,5,3,6,4};
+
+    int MinPrice = prices[0];
+    int MaxProfit = 0;
+
+    for (int i = 1; i < prices.size(); i++)
     {
-        for(int j = i+1 ; j < n ; j++)
+        
+        if(prices[i] < MinPrice)
         {
-            if( (StockPrice[j] - StockPrice[i]) > MaxProfit )
-            {
-               MaxProfit = StockPrice[j] - StockPrice[i] ;
-            }
-            
+            MinPrice = prices[i] ;
+        }
+        
+        if(prices[i] - MinPrice > MaxProfit)
+        {
+            MaxProfit = prices[i] - MinPrice ;
         }
     }
     
+    cout << "Maximum Profit = " << MaxProfit << '\n';
+
+    return 0;
 }
